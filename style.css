@@ -1,0 +1,172 @@
+/* FLEXBOX:
+
+- Flebox is an efficient, cleaner way of creating layouts. Aligning items vertically, 
+horinzontally and also centering items. 
+
+- To create a Flexbox container, you add DISPLAY:FLEX to your element in your css file. 
+
+- Every child element in that Flexbox container is now a FLEX ITEM. The default positioning
+for all flex items in the container, is to be in a row. 
+
+- To stack the flex items vertically instead, you add FLEX-DIRECTION: COLUMN. 
+
+--------------------------------------------------------------------------------
+
+I used Flexbox to create the vertical split. First, I created the Flexbox container (#vertical-container).
+Then I gave it a style of display:flex; 
+
+This automatically put the two boxes in that container, in a row. Giving each box in the container 
+a width of 50% gives it a split screen effect. 
+
+*/ 
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none; /* Removes underline from links in footer */
+    transition: ease-in-out 0.3s;
+}
+
+.global-wrap{          /* Creating space around content */
+    padding-left:6.5%;
+    padding-right:6.5%;
+}
+
+/*Header Styles */
+
+header{                 /* Header container */
+    position: fixed;
+    width: 100%;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+header .global-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#logo{
+    color:white;
+}
+
+nav{
+    display: flex;
+}
+
+nav a{
+    color:white;
+    padding-left:50px;
+    padding-right: 50px;
+
+}
+
+/* End of Header Styles */
+
+/* Vertical Split Styles */
+
+#vertical-container{
+    height:100vh;
+    width:100%;
+    background-color:brown;
+
+    display: flex;
+}
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
+    #vertical-container {
+      flex-direction: column;
+    }
+  }
+
+
+#box-1{
+    height:100%;
+    width:100%;
+    
+    background-image: url('audi.jfif');
+    background-size:cover;
+    background-position: center;
+}
+
+#box-2{
+    height:100%;
+    width:100%;
+    padding:100px;
+    background-color:#191919;
+}
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
+    #box-2 {
+      padding-left: 6.5%;
+      padding-right: 6.5%;
+    }
+  }
+
+#box-2 h1{
+    color:white;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+#box-2 p{
+    color:white;
+}
+
+/* End of Verticle Split Styles */
+
+/* Footer Styles */
+
+footer{                              /* Footer Container */
+    background-color:#191919;
+    border-top: solid 1px #464646;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+footer .global-wrap{
+    display: flex;
+}
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the footer columns will wrap so it's responsive on mobiles*/
+    footer .global-wrap {
+      flex-direction: column;
+    }
+  }
+
+.column{                     /* Footer Columns */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the footer columns will wrap so it's responsive on mobile devices */
+    .column:nth-child(2) {
+      margin-top:50px;
+      margin-bottom: 50px;
+    }
+  }
+
+.column h3{           /* Footer Heading */
+    font-size: 2em;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.column p, a{         /* Footer Paragraphs and Links */
+    font-size: 1.2em;
+    color:white;
+}
+
+
+
+
+/* End of Footer Styles */
+
+
+
+
+
