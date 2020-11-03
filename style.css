@@ -28,12 +28,26 @@ a width of 50% gives it a split screen effect.
     transition: ease-in-out 0.3s;
 }
 
+
 .global-wrap{          /* Creating space around content */
     padding-left:6.5%;
     padding-right:6.5%;
 }
 
 /*Header Styles */
+
+#mobile-menu{
+    color:white;
+    display: none;
+    font-size: 1.4em;
+}
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
+    #mobile-menu {
+      display:block;
+    }
+  }
+
 
 header{                 /* Header container */
     position: fixed;
@@ -56,6 +70,12 @@ header .global-wrap{
 nav{
     display: flex;
 }
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
+    nav {
+      display:none;
+    }
+  }
 
 nav a{
     color:white;
@@ -156,10 +176,24 @@ footer .global-wrap{
     color:white;
 }
 
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the footer columns will wrap so it's responsive on mobile devices */
+    .column h3 {
+      font-size: 1.5em;
+    }
+  }
+
+
+
 .column p, a{         /* Footer Paragraphs and Links */
     font-size: 1.2em;
     color:white;
 }
+
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the footer columns will wrap so it's responsive on mobile devices */
+    .column p, a {
+      font-size: 1em;
+    }
+  }
 
 
 
