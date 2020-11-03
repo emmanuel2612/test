@@ -105,16 +105,26 @@ nav a{
 
 #box-1{
     height:100%;
-    width:100%;
+    width:50%;
     
     background-image: url('audi.jfif');
     background-size:cover;
     background-position: center;
 }
 
+@media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
+    #box-1 {
+    height: 50%;
+      width: 100%;
+    }
+  }
+
+
+
 #box-2{
     height:100%;
-    width:100%;
+    width:50%;
+
     padding:100px;
     background-color:#191919;
 }
@@ -123,6 +133,9 @@ nav a{
     #box-2 {
       padding-left: 6.5%;
       padding-right: 6.5%;
+    
+      height: 50%;
+      width: 100%;
     }
   }
 
