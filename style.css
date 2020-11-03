@@ -99,6 +99,8 @@ nav a{
 @media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
     #vertical-container {
       flex-direction: column;
+
+      height: auto;
     }
   }
 
@@ -114,7 +116,7 @@ nav a{
 
 @media only screen and (max-width: 1000px) {  /* When the page is less than 1000px, the boxes will wrap so it's responsive on mobiles*/
     #box-1 {
-    height: 50%;
+    height: 50vh;
       width: 100%;
     }
   }
